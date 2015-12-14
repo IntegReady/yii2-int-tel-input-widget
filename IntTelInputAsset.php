@@ -26,6 +26,6 @@ class IntTelInputAsset extends AssetBundle
     public function init()
     {
         $this->sourcePath =  __DIR__ . '/assets';
-        parent::init()
+        parent::init();
     }
 }
