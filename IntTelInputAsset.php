@@ -23,5 +23,9 @@ class IntTelInputAsset extends AssetBundle
         'yii\bootstrap\BootstrapAsset',
     ];
 
-
+    public function init()
+    {
+        $this->sourcePath =  __DIR__ . '/assets';
+        parent::init();
+    }
 }
