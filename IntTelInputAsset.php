@@ -6,7 +6,7 @@ use yii\web\AssetBundle;
 
 class IntTelInputAsset extends AssetBundle
 {
-    public $sourcePath = '@bigferumdron/intTelInput/assets';
+    public $sourcePath;
     public $css        = [
         'css/intlTelInput.css',
     ];
@@ -22,4 +22,10 @@ class IntTelInputAsset extends AssetBundle
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
+    public function init()
+    {
+        $this->sourcePath =  __DIR__ . '/assets';
+        parent::init();
+    }
 }
