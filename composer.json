@@ -1,5 +1,5 @@
 {
-    "name": "bigferumdron/yii2-intTelInput-widget",
+    "name": "bigferumdron/yii2-int-tel-input-widget",
     "description": "Yii2 input widget created on basis of jquery plugin http://jackocnr.com/intl-tel-input.html",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","helpers","widgets"],
