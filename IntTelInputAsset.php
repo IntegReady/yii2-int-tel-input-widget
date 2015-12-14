@@ -12,7 +12,7 @@ class IntTelInputAsset extends AssetBundle
     ];
 
     public $js      = [
-        'js/intlTelInput.js',
+        'js/intlTelInput.min.js',
     ];
     public $cssOptions = [
         'type' => 'text/css',
