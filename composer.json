@@ -1,0 +1,22 @@
+{
+    "name": "bigferumdron/yii2-intTelInput-widget",
+    "description": "Yii2 input widget created on basis of jquery plugin http://jackocnr.com/intl-tel-input.html",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","helpers","widgets"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Andrey Galyamov",
+            "email": "bigferumdron@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "bigferumdron\\IntTelInput\\": ""
+        }
+    }
+}
