@@ -1,5 +1,6 @@
 <?php
-namespace bigferumdron\IntTelInput;
+
+namespace integready\IntTelInput;
 
 use Yii;
 use yii\helpers\Html;
@@ -14,7 +15,7 @@ use yii\widgets\InputWidget;
 class IntTelInput extends InputWidget
 {
     /**
-     * @var bollean  Allow users to enter national numbers (and not have to think about international dial codes)
+     * @var boolean  Allow users to enter national numbers (and not have to think about international dial codes)
      * Default:true
      *
      */
@@ -37,29 +38,28 @@ class IntTelInput extends InputWidget
     }
 
     /**
-     * @return string
-     */
-    public function run()
-    {
-            Html::addCssClass($this->options, 'form-control');
-            return Html::activeTextInput($this->model, $this->attribute, $this->options);
-    }
-
-    /**
      * Registers the needed assets
      */
     public function registerAssets()
     {
-        $nationalModeString = ($this->nationalMode) ? 'true' : 'false';
-        $intlTelInputParams = "nationalMode: {$nationalModeString} ";
-        $preferredCountriesString = (count($this->preferredCountries)) ? "'" . strtolower(implode("', '", $this->preferredCountries)) . "'" : "";
-        $intlTelInputParams .= ", preferredCountries: [{$preferredCountriesString}] ";
-        $excludeCountriesString = (count($this->excludeCountries)) ? "'" . strtolower(implode("', '", $this->excludeCountries)) . "'" : "";
-        $intlTelInputParams .= ", excludeCountries:[{$excludeCountriesString}]";
-
+        $nationalModeString       = ($this->nationalMode) ? 'true' : 'false';
+        $intlTelInputParams       = "nationalMode: {$nationalModeString} ";
+        $preferredCountriesString = (count($this->preferredCountries)) ? "'" . strtolower(implode("', '", $this->preferredCountries)) . "'" : '';
+        $intlTelInputParams       .= ", preferredCountries: [{$preferredCountriesString}] ";
+        $excludeCountriesString   = (count($this->excludeCountries)) ? "'" . strtolower(implode("', '", $this->excludeCountries)) . "'" : '';
+        $intlTelInputParams       .= ", excludeCountries:[{$excludeCountriesString}]";
 
         IntTelInputAsset::register($this->view);
         Yii::$app->view->registerJs("jQuery('#" . $this->options['id'] . "').intlTelInput({{$intlTelInputParams}});");
     }
 
+    /**
+     * @return string
+     */
+    public function run()
+    {
+        Html::addCssClass($this->options, 'form-control');
+
+        return Html::activeTextInput($this->model, $this->attribute, $this->options);
+    }
 }
