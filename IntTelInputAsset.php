@@ -1,12 +1,12 @@
 <?php
 
-namespace integready\IntTelInput;
+namespace integready\inttelinput;
 
 use yii\web\AssetBundle;
 
 /**
  * Class IntTelInputAsset
- * @package integready\IntTelInput
+ * @package integready\inttelinput
  */
 class IntTelInputAsset extends AssetBundle
 {
