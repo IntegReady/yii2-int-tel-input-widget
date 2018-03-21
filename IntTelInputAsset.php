@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
  */
 class IntTelInputAsset extends AssetBundle
 {
-    public $sourcePath = '@integready/IntTelInput/assets';
+    public $sourcePath = '@integready/inttelinput/assets';
     public $css        = [
         'css/intlTelInput.css',
     ];
