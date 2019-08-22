@@ -89,7 +89,7 @@ class PhoneInputValidator extends Validator
         ]);
 
         return <<<JS
-var options =; $options, telInput = $(attribute.input);
+var options = $options, telInput = $(attribute.input);
 
 if($.trim(telInput.val())){
     if(!telInput.intlTelInput("isValidNumber")){
