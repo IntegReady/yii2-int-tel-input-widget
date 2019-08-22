@@ -1,6 +1,6 @@
 {
     "name": "integready/yii2-intl-tel-input",
-    "version": "0.1.2",
+    "version": "2.0.0",
     "description": "Yii2 International telephone numbers - Asset Bundle, Behavior, Validator, Widget",
     "keywords": [
         "yii2",
