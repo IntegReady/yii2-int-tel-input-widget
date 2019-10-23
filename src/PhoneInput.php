@@ -35,7 +35,7 @@ class PhoneInput extends InputWidget
         $jsInit    = <<<JS
 (function ($) {
     "use strict";
-    window.intlTelInput(document.querySelector('#$id'), $jsOptions).promise.then($this->afterInit);
+    $('#$id').intlTelInput($jsOptions).promise().done($this->afterInit);
 })(jQuery);
 JS;
         $this->view->registerJs($jsInit);
